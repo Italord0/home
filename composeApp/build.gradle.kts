@@ -18,9 +18,9 @@ kotlin {
         }
         binaries.executable()
     }
-    
+
     sourceSets {
-        
+
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
@@ -28,14 +28,14 @@ kotlin {
             implementation(compose.ui)
             @OptIn(ExperimentalComposeLibrary::class)
             implementation(compose.components.resources)
-            
+
             implementation(libs.kotlinx.coroutines)
-            
+
             //ktor
             implementation("io.ktor:ktor-client-core:3.0.0-wasm2")
             implementation("io.ktor:ktor-serialization-kotlinx-json:3.0.0-wasm2")
             implementation("io.ktor:ktor-client-content-negotiation:3.0.0-wasm2")
-            
+
         }
     }
 }
